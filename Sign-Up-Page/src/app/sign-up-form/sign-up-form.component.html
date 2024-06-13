@@ -1,0 +1,52 @@
+<div class="mybody">
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4>Only takes a minute to Complete...</h4>
+      <form #login="ngForm"  (ngSubmit)="submit()">
+        <label>First Name</label>
+        <input #name="ngModel" name="firstname" required minlength="3" type="text" placeholder="Enter your FirstName" id="UserFirstName" [(ngModel)]="form.firstName">
+        <div *ngIf="name.touched && name.invalid" class="alert">
+          <p *ngIf="name.errors?.['required']">First Name is required !!</p>
+          <p *ngIf="name.errors?.['minlength']">Sorry !! Short Name</p>
+        </div>
+  
+        <label>Last Name</label>
+        <input #lastname="ngModel" minlength="2" type="text" name="lastName"   required placeholder="Enter Your Last Name" id="UserLastName" [(ngModel)]="form.lastName">
+        <div *ngIf="lastname.touched && lastname.invalid" class="alert">
+            <p *ngIf="lastname.errors?.['required']">First Name is required !!</p>
+            <p *ngIf="lastname.errors?.['minlength']">Sorry !! Short Name</p>
+        </div>
+    
+        <label>Email</label>
+        <input #email="ngModel" type="email" name="email" required placeholder="Enter Your EmailId" id="UserEmailId" [(ngModel)]="form.email">
+        <div *ngIf="email.touched && email.invalid" class="alert">
+        <p *ngIf="email.errors?.['required']">Email is Required !!!</p>
+        <p *ngIf="email.errors?.['email']">Invalid Email Format !!!</p>
+        </div>
+
+        <label>Password</label>
+        <input #password="ngModel" minlength="6" type="password" name="password" required placeholder="Enter Password" id="SetPassword" [(ngModel)]="form.password">
+        <div *ngIf="password.touched && password.invalid" class="alert">
+            <p *ngIf="password.errors?.['required']">First Name is required !!</p>
+            <p *ngIf="password.errors?.['minlength']">Sorry !! Short Name</p>
+        </div>
+        
+
+        <label>Confirm Password</label>
+        <input #confirmpassword="ngModel" minlength="6" type="password" name="confirmPassword" required placeholder="Confirm Password" id="ConfirmPassword" [(ngModel)]="form.confirmPassword">
+        <div *ngIf="confirmpassword.touched && confirmpassword.invalid" class="alert">
+            <p *ngIf="confirmpassword.errors?.['required']">First Name is required !!</p>
+            <p *ngIf="confirmpassword.errors?.['minlength']">Sorry !! Short Name</p>
+        </div>
+        
+        <button class="button" type="submit" [disabled]="login.invalid">Submit</button>
+      </form>
+  
+      <p class="para-1">By clicking the Sign-Up button, you agree to our
+        <br>
+        <a href="###">Terms and Condition</a> and <a href="###">Policy Privacy</a>
+      </p>
+    </div>
+    <p class="para-2">Already have an account? <a routerLink="/login" target="_self">Login Here</a></p>
+  </div>
+  

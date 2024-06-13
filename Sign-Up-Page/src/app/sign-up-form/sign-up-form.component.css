@@ -1,0 +1,74 @@
+*{
+    
+    font-family:Arial, Helvetica, sans-serif;
+}
+.mybody{
+    margin: 0px;
+    background-color: rgb(39, 39, 104);
+    padding: 20px;
+} 
+.signup-box{
+    width: 450px;
+    height: 708px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+    padding-top: 20px;
+}
+h4{
+    margin-top: 15px;
+    text-align: center;
+}
+form{
+    width:300px;
+    margin-left: 20px;
+}
+form label{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+form input{
+    width: 130%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    outline: none;
+}
+.button{  
+    width: 130%;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: rgb(41, 197, 176);
+    color:rgb(244, 244, 244);
+    font-size: 18px;
+   border-color: rgb(41, 197, 176);
+    border-radius: 8px;
+}
+
+.para-1{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.para-2 {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+}
+.para-2 a{
+    color: rgb(100, 229, 229);
+}
+.alert{
+    color: rgb(191, 15, 15);
+    font-size: 15px;
+}

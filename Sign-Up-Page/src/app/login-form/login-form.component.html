@@ -1,0 +1,21 @@
+       <div class="mybody">
+       <div class="signup-box">
+        <form #login="ngForm" (ngSubmit)="submit()">
+        <label>Email</label>
+        <input #email="ngModel" type="email" name="email" required placeholder="Enter Your EmailId" id="UserEmailId" [(ngModel)]="form.email">
+        <div *ngIf="email.touched && email.invalid" class="alert">
+        <p *ngIf="email.errors?.['required']">Email is Required !!!</p>
+        <p *ngIf="email.errors?.['email']">Invalid Email Format !!!</p>
+        </div>
+
+        <label>Password</label>
+        <input #password="ngModel" minlength="6" type="password" name="password" required placeholder="Enter Password" id="SetPassword" [(ngModel)]="form.password">
+        <div *ngIf="password.touched && password.invalid" class="alert">
+            <p *ngIf="password.errors?.['required']">Password is required !!</p>
+            <p *ngIf="password.errors?.['minlength']">Sorry !! Small Password</p>
+        </div>
+        <button class="button" type="submit" [disabled]="login.invalid">Submit</button>
+        </form>
+        </div>
+        <p class="para-2">Don't have an account? <a routerLink="/signin" target="_self">Sign-Up Here</a></p>
+        </div>
